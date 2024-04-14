@@ -4,8 +4,6 @@ import com.manish.project.display.Panel;
 import com.manish.project.display.Window;
 import com.manish.project.scene.SceneManager;
 
-import java.awt.*;
-
 public class GameEngine {
 
     private boolean running;
@@ -27,10 +25,6 @@ public class GameEngine {
 
     public void dispose() {
         System.out.println(" || Game closed || ");
-    }
-
-    public void render(Graphics g){
-        panel.paintComponent(g);
     }
 
     public void update(){

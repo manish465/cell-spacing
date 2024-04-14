@@ -25,4 +25,8 @@ public class SceneManager {
     public Scene getCurrentScene() {
         return currentScene;
     }
+
+    // TODO : addScene
+    // TODO : removeScene
+    // TODO : changeCurrentScene
 }

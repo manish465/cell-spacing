@@ -2,6 +2,7 @@ package com.manish.project.actor;
 
 import com.manish.project.component.Component;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -44,15 +45,21 @@ public class Actor {
         c.setActor(this);
     }
 
-    public void update() {
-        for(int i=0; i < components.size(); i++) {
-            components.get(i).update();
-        }
-    }
-
     public void start() {
         for(int i=0; i < components.size(); i++) {
             components.get(i).start();
+        }
+    }
+
+    public void render(Graphics g) {
+        for(int i=0; i < components.size(); i++) {
+            components.get(i).render(g);
+        }
+    }
+
+    public void update() {
+        for(int i=0; i < components.size(); i++) {
+            components.get(i).update();
         }
     }
 

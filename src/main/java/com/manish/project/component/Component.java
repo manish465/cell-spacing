@@ -2,6 +2,7 @@ package com.manish.project.component;
 
 import com.manish.project.actor.Actor;
 
+import java.awt.*;
 import java.util.UUID;
 
 public abstract class Component {
@@ -25,5 +26,6 @@ public abstract class Component {
     }
 
     public abstract void start();
+    public abstract void render(Graphics g);
     public abstract void update();
 }
