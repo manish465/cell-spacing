@@ -45,12 +45,6 @@ public class Actor {
         c.setActor(this);
     }
 
-    public void start() {
-        for(int i=0; i < components.size(); i++) {
-            components.get(i).start();
-        }
-    }
-
     public void render(Graphics g) {
         for(int i=0; i < components.size(); i++) {
             components.get(i).render(g);

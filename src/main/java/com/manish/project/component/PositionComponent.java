@@ -5,26 +5,31 @@ import com.manish.project.utils.Position;
 
 import java.awt.*;
 
-public class RectComponent extends Component {
+public class PositionComponent extends Component{
     private final Position position;
 
-    public RectComponent(Actor actor) {
+    public PositionComponent(double x, double y, Actor actor) {
         super(actor);
-        position = this.getActor().getComponent(PositionComponent.class).getPosition();
+        this.position = new Position(x, y);
     }
 
+    @Override
     public void start() {
 
     }
 
     @Override
     public void render(Graphics g) {
-        g.setColor(Color.BLUE);
-        g.fillRect((int) position.getX(), (int) position.getY(), 50, 50);
+
     }
 
     @Override
     public void update() {
+        position.setY(position.getY() + 0.2);
+        position.setX(position.getX() + 0.2);
+    }
 
+    public Position getPosition() {
+        return position;
     }
 }

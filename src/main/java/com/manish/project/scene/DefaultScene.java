@@ -1,17 +1,15 @@
 package com.manish.project.scene;
 
 import com.manish.project.actor.Actor;
-import com.manish.project.component.RectComponent;
+import com.manish.project.actor.ActorEnum;
+import com.manish.project.actor.ActorFactory;
 
 import java.awt.*;
 
 public class DefaultScene extends Scene {
     public DefaultScene(String sceneName) {
         super(sceneName);
-
-        Actor rectActor = new Actor();
-        rectActor.addComponent(new RectComponent());
-        actors.add(rectActor);
+        actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
     }
 
     @Override

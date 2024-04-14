@@ -18,10 +18,6 @@ public abstract class Scene {
         actors = new ArrayList<>();
     }
 
-    public void start() {
-        actors.forEach(Actor::start);
-    }
-
     public void addActorToScene(Actor actor) {
         actors.add(actor);
     }

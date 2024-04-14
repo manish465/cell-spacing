@@ -9,8 +9,9 @@ public abstract class Component {
     private Actor actor;
     private final UUID componentID;
 
-    public Component() {
+    public Component(Actor actor) {
         this.componentID = UUID.randomUUID();
+        this.actor = actor;
     }
 
     public UUID getComponentID() {
