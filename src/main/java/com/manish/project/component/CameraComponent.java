@@ -11,14 +11,17 @@ public class CameraComponent extends Component{
     private final Position position;
     private final Controller controller;
     private double zoom;
-    private double speed;
+    private final double moveSpeed;
+    private final double zoomSpeed;
 
     public CameraComponent(Actor actor) {
         super(actor);
         this.position = actor.getComponent(PositionComponent.class).getPosition();
         this.controller = new PlayerController();
-        this.speed = 1.0;
         this.zoom = 1.0;
+        this.moveSpeed = 1.0;
+        this.zoomSpeed = 1.1;
+        System.out.println(position);
     }
 
     @Override
@@ -35,27 +38,27 @@ public class CameraComponent extends Component{
     @Override
     public void update() {
         if (controller.isControllerUp()){
-            position.setY(position.getY() + speed);
+            position.setY(position.getY() + moveSpeed);
         }
 
         if(controller.isControllerDown()){
-            position.setY(position.getY() - speed);
+            position.setY(position.getY() - moveSpeed);
         }
 
         if(controller.isControllerRight()){
-            position.setX(position.getX() + speed);
+            position.setX(position.getX() + moveSpeed);
         }
 
         if(controller.isControllerLeft()){
-            position.setX(position.getX() - speed);
+            position.setX(position.getX() - moveSpeed);
         }
 
         if(controller.isControllerZoomIn()){
-            zoom *= 1.1;
+            zoom *= zoomSpeed;
         }
 
         if(controller.isControllerZoomOut()){
-            zoom /= 1.1;
+            zoom /= zoomSpeed;
         }
     }
 }
