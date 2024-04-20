@@ -1,6 +1,7 @@
 package com.manish.project.component;
 
 import com.manish.project.actor.Actor;
+import com.manish.project.setting.Constant;
 import com.manish.project.utils.Position;
 
 import java.awt.*;
@@ -20,7 +21,7 @@ public class RectComponent extends Component {
     @Override
     public void render(Graphics2D g) {
         g.setColor(Color.BLUE);
-        g.fillRect((int) position.getX(), (int) position.getY(), 50, 50);
+        g.fillRect((int) position.getX(), (int) position.getY(), Constant.TILE_WIDTH, Constant.TILE_HEIGHT);
     }
 
     @Override

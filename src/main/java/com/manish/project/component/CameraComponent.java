@@ -19,7 +19,7 @@ public class CameraComponent extends Component{
         this.position = actor.getComponent(PositionComponent.class).getPosition();
         this.controller = new PlayerController();
         this.zoom = 1.0;
-        this.moveSpeed = 1.0;
+        this.moveSpeed = 1.5;
         this.zoomSpeed = 1.1;
         System.out.println(position);
     }

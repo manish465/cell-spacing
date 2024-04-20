@@ -18,9 +18,6 @@ public class Panel extends JPanel {
         Graphics2D g = (Graphics2D) graphics.create();
         super.paintComponent(g);
 
-        g.setColor(Color.BLACK);
-        g.fillRect(0, 0, this.getWidth(), this.getHeight());
-
         renderer.renderActor(g);
         g.dispose();
     }

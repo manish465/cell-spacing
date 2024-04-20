@@ -1,9 +1,9 @@
 package com.manish.project.actor;
 
 import com.manish.project.component.CameraComponent;
+import com.manish.project.component.GridComponent;
 import com.manish.project.component.PositionComponent;
 import com.manish.project.component.RectComponent;
-import com.manish.project.setting.Constant;
 import com.manish.project.utils.Position;
 
 public class ActorFactory {
@@ -18,11 +18,13 @@ public class ActorFactory {
 
             case CameraActor -> {
                 actor.addComponent(new PositionComponent(
-                        new Position((double) Constant.WINDOW_WIDTH / 2, (double) Constant.WINDOW_HEIGHT / 2), actor
+                        new Position(0, 0), actor
                 ));
                 actor.addComponent(new CameraComponent(actor));
             }
-            case GridActor -> {}
+            case GridActor -> {
+                actor.addComponent(new GridComponent(actor));
+            }
         }
 
         return actor;

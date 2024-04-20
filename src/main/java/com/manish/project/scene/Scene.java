@@ -20,6 +20,7 @@ public abstract class Scene {
         actors = new ArrayList<>();
 
         actors.add(ActorFactory.createActor(ActorEnum.CameraActor));
+        actors.add(ActorFactory.createActor(ActorEnum.GridActor));
     }
 
     public void addActorToScene(Actor actor) {
