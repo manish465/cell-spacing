@@ -1,6 +1,8 @@
 package com.manish.project.scene;
 
 import com.manish.project.actor.Actor;
+import com.manish.project.actor.ActorEnum;
+import com.manish.project.actor.ActorFactory;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -16,6 +18,8 @@ public abstract class Scene {
         sceneID = UUID.randomUUID();
         this.sceneName = sceneName;
         actors = new ArrayList<>();
+
+        actors.add(ActorFactory.createActor(ActorEnum.CameraActor));
     }
 
     public void addActorToScene(Actor actor) {
@@ -30,7 +34,7 @@ public abstract class Scene {
         return sceneName;
     }
 
-    public abstract void render(Graphics g);
+    public abstract void render(Graphics2D g);
     public abstract void update();
 
     // TODO : removeActor

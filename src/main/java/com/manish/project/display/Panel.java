@@ -14,7 +14,8 @@ public class Panel extends JPanel {
         setPreferredSize(new Dimension(Constant.WINDOW_WIDTH, Constant.WINDOW_HEIGHT));
     }
 
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics graphics){
+        Graphics2D g = (Graphics2D) graphics.create();
         super.paintComponent(g);
 
         g.setColor(Color.BLACK);

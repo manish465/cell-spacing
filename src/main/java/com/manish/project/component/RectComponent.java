@@ -18,13 +18,12 @@ public class RectComponent extends Component {
     }
 
     @Override
-    public void render(Graphics g) {
+    public void render(Graphics2D g) {
         g.setColor(Color.BLUE);
         g.fillRect((int) position.getX(), (int) position.getY(), 50, 50);
     }
 
     @Override
     public void update() {
-
     }
 }

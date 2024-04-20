@@ -45,7 +45,7 @@ public class Actor {
         c.setActor(this);
     }
 
-    public void render(Graphics g) {
+    public void render(Graphics2D g) {
         for(int i=0; i < components.size(); i++) {
             components.get(i).render(g);
         }

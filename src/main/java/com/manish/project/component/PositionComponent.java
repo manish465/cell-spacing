@@ -8,9 +8,9 @@ import java.awt.*;
 public class PositionComponent extends Component{
     private final Position position;
 
-    public PositionComponent(double x, double y, Actor actor) {
+    public PositionComponent(Position position, Actor actor) {
         super(actor);
-        this.position = new Position(x, y);
+        this.position = position;
     }
 
     @Override
@@ -19,14 +19,12 @@ public class PositionComponent extends Component{
     }
 
     @Override
-    public void render(Graphics g) {
+    public void render(Graphics2D g) {
 
     }
 
     @Override
     public void update() {
-        position.setY(position.getY() + 0.2);
-        position.setX(position.getX() + 0.2);
     }
 
     public Position getPosition() {

@@ -9,8 +9,8 @@ import java.util.Arrays;
 public class MouseInput implements MouseInputListener {
     private static MouseInput mouseInput;
 
-    private Position position;
-    private boolean[] mouseButtonPressed;
+    private final Position position;
+    private final boolean[] mouseButtonPressed;
 
     private MouseInput() {
         position = new Position(0, 0);

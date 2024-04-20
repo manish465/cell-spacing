@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class KeyInput implements KeyListener {
     private static KeyInput keyInput;
-    private boolean[] keyPressed;
+    private final boolean[] keyPressed;
 
     private KeyInput(){
         keyPressed = new boolean[350];

@@ -10,10 +10,15 @@ public class DefaultScene extends Scene {
     public DefaultScene(String sceneName) {
         super(sceneName);
         actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
+        actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
+        actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
+        actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
+        actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
+        actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
     }
 
     @Override
-    public void render(Graphics g) {
+    public void render(Graphics2D g) {
         actors.forEach(actor -> actor.render(g));
     }
 

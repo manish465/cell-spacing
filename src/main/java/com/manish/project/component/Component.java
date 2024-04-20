@@ -27,6 +27,6 @@ public abstract class Component {
     }
 
     public abstract void start();
-    public abstract void render(Graphics g);
+    public abstract void render(Graphics2D g);
     public abstract void update();
 }
