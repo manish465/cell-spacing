@@ -5,16 +5,20 @@ import com.manish.project.actor.ActorEnum;
 import com.manish.project.actor.ActorFactory;
 
 import java.awt.*;
+import java.util.List;
 
 public class DefaultScene extends Scene {
     public DefaultScene(String sceneName) {
         super(sceneName);
-        actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
-        actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
-        actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
-        actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
-        actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
-        actors.add(ActorFactory.createActor(ActorEnum.SimpleRectActor));
+
+        actors.addAll(List.of(
+                ActorFactory.createActor(ActorEnum.CircleActor),
+                ActorFactory.createActor(ActorEnum.CircleActor),
+                ActorFactory.createActor(ActorEnum.CircleActor),
+                ActorFactory.createActor(ActorEnum.CircleActor),
+                ActorFactory.createActor(ActorEnum.CircleActor),
+                ActorFactory.createActor(ActorEnum.CircleActor)
+        ));
     }
 
     @Override

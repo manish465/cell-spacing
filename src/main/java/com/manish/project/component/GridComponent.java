@@ -9,10 +9,11 @@ import java.awt.*;
 
 public class GridComponent extends Component{
     private final Grid grid;
+    private boolean show;
 
-    public GridComponent(Actor actor) {
+    public GridComponent(boolean show, Actor actor) {
         super(actor);
-
+        this.show = show;
         grid = new Grid();
     }
 
@@ -25,7 +26,7 @@ public class GridComponent extends Component{
     public void render(Graphics2D g) {
         Tile[][] tiles = grid.getTiles();
 
-        g.setColor(Color.GRAY);
+        g.setColor(show ? Color.GRAY : Color.WHITE);
         g.setStroke(new BasicStroke(2));
         for(int i=0; i < grid.getHeight(); i++){
             for(int j=0; j < grid.getWidth(); j++){
@@ -42,5 +43,9 @@ public class GridComponent extends Component{
     @Override
     public void update() {
 
+    }
+
+    public void setShow(boolean show) {
+        this.show = show;
     }
 }

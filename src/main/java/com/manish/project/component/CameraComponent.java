@@ -3,7 +3,7 @@ package com.manish.project.component;
 import com.manish.project.actor.Actor;
 import com.manish.project.controller.Controller;
 import com.manish.project.controller.PlayerController;
-import com.manish.project.utils.Position;
+import com.manish.project.utils.position.Position;
 
 import java.awt.*;
 

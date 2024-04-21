@@ -1,6 +1,7 @@
 package com.manish.project.input;
 
-import com.manish.project.utils.Position;
+import com.manish.project.utils.position.Position;
+import com.manish.project.utils.position.Position2D;
 
 import javax.swing.event.MouseInputListener;
 import java.awt.event.MouseEvent;
@@ -13,7 +14,7 @@ public class MouseInput implements MouseInputListener {
     private final boolean[] mouseButtonPressed;
 
     private MouseInput() {
-        position = new Position(0, 0);
+        position = new Position2D(0, 0);
 
         mouseButtonPressed = new boolean[3];
         Arrays.fill(mouseButtonPressed, false);

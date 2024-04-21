@@ -4,4 +4,5 @@ public enum ActorEnum {
     SimpleRectActor,
     CameraActor,
     GridActor,
+    CircleActor
 }
