@@ -21,7 +21,7 @@ public class ActorFactory {
                 actor.addComponent(new CameraComponent(actor));
             }
             case GridActor -> {
-                actor.addComponent(new GridComponent(false, actor));
+                actor.addComponent(new GridComponent(true, actor));
             }
             case CircleActor -> {
                 actor.addComponent(new PositionComponent(new RandomPosition(), actor));

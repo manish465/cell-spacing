@@ -5,7 +5,7 @@ public class Grid {
     private final Tile[][] tiles2D;
 
     public Grid(){
-        tiles2D = new Tile[200][200];
+        tiles2D = new Tile[500][500];
         initializeTiles();
     }
 

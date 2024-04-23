@@ -13,8 +13,8 @@ public class GameLoop implements Runnable{
 
     @Override
     public void run() {
-        int FPS_SET = 120;
-        int UPS_SET = 200;
+        int FPS_SET = 60;
+        int UPS_SET = 60;
 
         double timePerFrame = 1000000000.0 / FPS_SET;
         double timePerUpdate = 1000000000.0 / UPS_SET;

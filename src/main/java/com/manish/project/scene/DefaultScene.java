@@ -12,12 +12,9 @@ public class DefaultScene extends Scene {
         super(sceneName);
 
         actors.addAll(List.of(
-                ActorFactory.createActor(ActorEnum.CircleActor),
-                ActorFactory.createActor(ActorEnum.CircleActor),
-                ActorFactory.createActor(ActorEnum.CircleActor),
-                ActorFactory.createActor(ActorEnum.CircleActor),
-                ActorFactory.createActor(ActorEnum.CircleActor),
-                ActorFactory.createActor(ActorEnum.CircleActor)
+                ActorFactory.createActor(ActorEnum.SimpleRectActor),
+                ActorFactory.createActor(ActorEnum.SimpleRectActor),
+                ActorFactory.createActor(ActorEnum.SimpleRectActor)
         ));
     }
 
